@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Medium crack",
+  "permissions": ["tabs"],
+  "version": "0.1",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://medium.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "download.jpeg"
+  }
+}
